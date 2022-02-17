@@ -1,0 +1,305 @@
+<!--
+<img class="image1" src="{{ user_image }}" height="600">
+-->
+
+
+
+
+<img class="image1" src="/static/img/impianto_senza_eiettore.png" height="600">
+<style>
+.image1 {
+  position: absolute;
+  left: 600px;
+  top: 100px;
+}
+</style>
+
+
+
+<img class="image2" src="/static/img/ThermoGroup_Logo_NonAnimato.png" height="120">
+<!--
+<img class="image2" src="{{ user_image2 }}" height="120">
+-->
+<style>
+.image2 {
+  position: absolute;
+  left: 1750px;
+  top: 550px;
+}
+</style>
+
+
+
+
+
+<h1>Input: </h1>
+
+<form method="POST">
+<div><label> <input type="text"  name="P_gc"  onfocus="this.value=''" value={{P_gc}} > P_gc</label></div>
+<div><label> <input type="text" name="T_gc"  onfocus="this.value=''" value={{T_gc}} > T_gc</label></div>
+<div><label><input type="text" name="T_eva"  onfocus="this.value=''" value={{T_eva}} > T_eva</label></div>
+<div><label><input type="text" name="T_sep"  onfocus="this.value=''" value={{T_sep}} > T_sep</label></div>
+<div><label>  <input type="text" name="eps"  onfocus="this.value=''" value={{eps}} > eps</label></div>
+<input type="submit" value="calcola">
+
+
+<input type="submit" name="submit_button" value="grafico">
+
+
+
+<h1>Output: </h1>
+
+<!--
+<div><label> <input type="text" name="P_gc"  onfocus="this.value=''" value={{P_gc}} > cop</label></div>
+<div><label> <input type="text" name="T_gc"  onfocus="this.value=''" value={{T_gc}} > W_cg</label></div>
+<div><label><input type="text" name="T_eva"  onfocus="this.value=''" value={{T_eva}} > W_eva</label></div>
+<div><label><input type="text" name="T_sep"  onfocus="this.value=''" value={{T_sep}} > W_IHX</label></div>
+<div><label>  <input type="text" name="eps"  onfocus="this.value=''" value={{eps}} > W_c</label></div>
+-->
+
+{% if T_gc %} 
+
+<p>cop&nbsp;&nbsp;&nbsp;= {{cop}} </p>
+<p>W_cg&nbsp;&nbsp;= {{W_cg}} kW</p>
+<p>W_eva&nbsp;= {{W_eva}} kW</p>
+<p>W_IHX&nbsp;= {{W_IHX}} kW</p>
+<p>W_c&nbsp;&nbsp;&nbsp;= {{W_c}} kW</p>
+
+{% endif %}
+
+
+
+
+</form>
+{% if P_gc %}
+
+
+
+
+<div class="container">
+  <div class="item">{{T0}}</div>
+  <div class="item">{{P0}}</div>
+  <div class="item">{{m0}}</div>
+  <div class="item">{{H0}}</div>
+</div>
+
+<style>
+.container {
+  display: grid;
+  grid-template-columns: 67px 35px;
+  grid-template-rows: auto;
+  font-size:20px;
+  font-weight: bold;
+  position: absolute;
+  left: 880px;
+  top: 335px;
+</style>
+
+
+<div class="container1">
+  <div class="item">{{T1}}</div>
+  <div class="item">{{P1}}</div>
+  <div class="item">{{m0}}</div>
+  <div class="item">{{H1}}</div>
+</div>
+
+<style>
+.container1 {
+  display: grid;
+  grid-template-columns: 67px 35px;
+  grid-template-rows: auto;
+  font-size:20px;
+  font-weight: bold;
+  position: absolute;
+  left: 1365px;
+  top: 460px;
+</style>
+
+<div class="container2">
+  <div class="item">{{T2}}</div>
+  <div class="item">{{P2}}</div>
+  <div class="item">{{m0}}</div>
+  <div class="item">{{H2}}</div>
+</div>
+
+<style>
+.container2 {
+  display: grid;
+  grid-template-columns: 67px 35px;
+  grid-template-rows: auto;
+  font-size:20px;
+  font-weight: bold;
+  position: absolute;
+  left: 1365px;
+  top: 260px;
+</style>
+
+<div class="container3">
+  <div class="item">{{T3}}</div>
+  <div class="item">{{P3}}</div>
+  <div class="item">{{m0}}</div>
+  <div class="item">{{H3}}</div>
+</div>
+
+<style>
+.container3 {
+  display: grid;
+  grid-template-columns: 67px 35px;
+  grid-template-rows: auto;
+  font-size:20px;
+  font-weight: bold;
+  position: absolute;
+  left: 1010px;
+  top: 207px;
+</style>
+
+<div class="container4">
+  <div class="item">{{T4}}</div>
+  <div class="item">{{P4}}</div>
+  <div class="item">{{m0}}</div>
+  <div class="item">{{H4}}</div>
+</div>
+
+<style>
+.container4 {
+  display: grid;
+  grid-template-columns: 67px 35px;
+  grid-template-rows: auto;
+  font-size:20px;
+  font-weight: bold;
+  position: absolute;
+  left: 725px;
+  top: 300px;
+</style>
+
+<div class="container5">
+  <div class="item">{{T5}}</div>
+  <div class="item">{{P5}}</div>
+  <div class="item">{{m0}}</div>
+  <div class="item">{{H5}}</div>
+</div>
+
+<style>
+.container5 {
+  display: grid;
+  grid-template-columns: 67px 35px;
+  grid-template-rows: auto;
+  font-size:20px;
+  font-weight: bold;
+  position: absolute;
+  left: 725px;
+  top: 390px;
+</style>
+
+<div class="container6">
+  <div class="item">{{T6}}</div>
+  <div class="item">{{P6}}</div>
+  <div class="item">{{m1}}</div>
+  <div class="item">{{H6}}</div>
+</div>
+
+<style>
+.container6 {
+  display: grid;
+  grid-template-columns: 67px 35px;
+  grid-template-rows: auto;
+  font-size:20px;
+  font-weight: bold;
+  position: absolute;
+  left: 675px;
+  top: 550px;
+</style>
+
+<div class="container7">
+  <div class="item">{{T7}}</div>
+  <div class="item">{{P7}}</div>
+  <div class="item">{{m1}}</div>
+  <div class="item">{{H7}}</div>
+</div>
+
+<style>
+.container7 {
+  display: grid;
+  grid-template-columns: 67px 35px;
+  grid-template-rows: auto;
+  font-size:20px;
+  font-weight: bold;
+  position: absolute;
+  left: 855px;
+  top: 592px;
+</style>
+
+
+<div class="container8">
+  <div class="item">{{T8}}</div>
+  <div class="item">{{P8}}</div>
+  <div class="item">{{m1}}</div>
+  <div class="item">{{H8}}</div>
+</div>
+
+<style>
+.container8 {
+  display: grid;
+  grid-template-columns: 67px 35px;
+  grid-template-rows: auto;
+  font-size:20px;
+  font-weight: bold;
+  position: absolute;
+  left: 1025px;
+  top: 474px;
+</style>
+
+<div class="container9">
+  <div class="item">{{T9}}</div>
+  <div class="item">{{P9}}</div>
+  <div class="item">{{m2}}</div>
+  <div class="item">{{H9}}</div>
+</div>
+
+<style>
+.container9 {
+  display: grid;
+  grid-template-columns: 67px 35px;
+  grid-template-rows: auto;
+  font-size:20px;
+  font-weight: bold;
+  position: absolute;
+  left: 875px;
+  top: 494px;
+</style>
+
+<div class="container10">
+  <div class="item">{{T10}}</div>
+  <div class="item">{{P10}}</div>
+  <div class="item">{{m2}}</div>
+  <div class="item">{{H10}}</div>
+</div>
+
+<style>
+.container10 {
+  display: grid;
+  grid-template-columns: 67px 35px;
+  grid-template-rows: auto;
+  font-size:20px;
+  font-weight: bold;
+  position: absolute;
+  left: 1025px;
+  top: 380px;
+</style>
+
+
+
+{% endif %}
+
+
+{% if plot_url %} 
+<img class="image3" src="data:image/png;base64, {{ plot_url }}" height="480">
+<style>
+.image3 {
+  position: absolute;
+
+}
+</style>
+{% endif %}
+
+
